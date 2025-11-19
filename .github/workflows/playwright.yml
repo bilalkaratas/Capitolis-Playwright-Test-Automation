@@ -1,7 +1,8 @@
 name: Playwright Tests
+
 on:
-  workflow_dispatch:
-  inputs:
+    workflow_dispatch:
+      inputs:
         browser:
           description: "Browser to test"
           type: choice
@@ -12,6 +13,10 @@ on:
             - "firefox"
             - "webkit"
 
+concurrency:
+  group: "run-tests-${{ github.ref }}"
+  cancel-in-progress: true
+  
 jobs:
   test:
     timeout-minutes: 60
