@@ -1,0 +1,20 @@
+{
+  "name": "capitolis",
+  "version": "1.0.0",
+  "description": "UI Automation tests for Amazon Create Account",
+  "author": "Billy Karatas",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test --project=chromium",
+    "test:file": "npx playwright test --project=chromium amazon && npm run report",
+    "report": "npx playwright show-report",
+    "clean": "rimraf test-results playwright-report"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1",
+    "rimraf": "^6.1.0"
+  }
+}
