@@ -1,5 +1,14 @@
 # Playwright Test Automation for Capitolis
 
+## Assignment Overview
+This project contains automated UI tests for the Amazon "Create Account" functionality, developed as part of the Capitolis home assignment.
+
+## Tools & Technologies Used
+- **Test Framework**: Playwright
+- **Programming Language**: TypeScript
+- **Browser Support**: Chromium, Firefox, Safari
+- **Reporting**: HTML, JSON and XML reports
+
 
 ## 🚀 Quick Start
 
@@ -38,24 +47,24 @@ export default defineConfig({
 });
 ```
 
-## Running Tests
+## Running Tests in GitHub
 
-to run tests:
+This framework contains [playwright.yml](.github/workflows/playwright.yml) GitHub Actions workflow which is designed to manually run Playwright tests on a selected browser.
+
+When triggered, it will execute the test suite for the browser chosen by the user (Chromium, Firefox, or WebKit). After executing the tests, it uploads the Playwright HTML report as an artifact so the test results can be easily reviewed or downloaded.
+
+### Sample Test Result
+
+![](images/github-actions.png)
+
+
+## Running Tests in the Local Environment
+
+To run the tests locally, use:
 
 > npm run test
 
-## test result
-![](test-results.png)
+This command triggers the test script defined in the `scripts` section of your [package.json](package.json) file.
 
-# Amazon Create Account UI Automation Tests
-
-## Assignment Overview
-This project contains automated UI tests for the Amazon "Create Account" functionality, developed as part of the Capitolis home assignment.
-
-## Tools & Technologies Used
-- **Test Framework**: Playwright
-- **Programming Language**: TypeScript
-- **Browser Support**: Chromium, Firefox
-- **Reporting**: HTML and JSON reports
-
-## Project Structure
+### Sample [Test Result](playwright-report)
+![](images/test-results.png)
